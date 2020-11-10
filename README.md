@@ -48,8 +48,9 @@ Já compilou: Utilize o comando ./file.
 <img src="https://github.com/vivianerenizia/Trabalho-1-Sistemas-Operacionais/blob/master/VJShell.jpeg" height="400" width="700">
 
 ### Bugs 
-```
-codigo bugado aqui
-```
+
+Não conseguimos implementar a execução de mais de um comando seguido separado pela virgula ou pelo pipe, como exemplificado na imagem abaixo:
+
+<img src="https://github.com/vivianerenizia/Trabalho-1-Sistemas-Operacionais/blob/master/VJShellBug.jpeg" height="400" width="700">
 
 > Em considerações finais, gostaríamos de agradecer ao autor do [*Tutorial - Write a Shell in C*](https://brennan.io/2015/01/16/write-a-shell-in-c/), Stephen Brennan! Thank you, sir! :shipit:
