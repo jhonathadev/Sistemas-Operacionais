@@ -19,7 +19,7 @@ Viviane Renizia Mendes Silva - 5209
 :small_blue_diamond:[*Bugs*](#Bugs)
 
 ### VJShell
-VJShell é um projeto desenvolvido para a disciplina de Sistemas Operacionais - SIN321. O objetivo visa o desenvolvimento de um interpretador Shell em linguagem C, que seja capaz de receber, iterativamente, entradas dos usuários (comandos), processá-los (caso ele
+VJShell é um projeto desenvolvido para a disciplina de Sistemas Operacionais - SIN351. O objetivo visa o desenvolvimento de um interpretador Shell em linguagem C, que seja capaz de receber, iterativamente, entradas dos usuários (comandos), processá-los (caso ele
 exista) e exibir a saída na tela de Prompt. 
 
 **Casos de erros:**
@@ -35,7 +35,17 @@ exista) e exibir a saída na tela de Prompt.
 - Espaço extra entre comandos deverá ser desconsiderado.
 
 ### Funcionamento
-O código fonte se encontra no arquivo shell.c. 
+O código fonte se encontra no arquivo shell.c e há um arquivo makefile para compilar o código.
+
+Primeira compilação: Comando make no terminal Linux para que o executável será gerado.
+
+Já compilou anteriormente: Utilize o comando make clean seguido do comando make.
+
+Já compilou: Utilize o comando ./file.
+
+**Tela de operação do VJShell**
+
+<img src="https://github.com/vivianerenizia/Trabalho-1-Sistemas-Operacionais/blob/master/VJShell.jpeg" height="400" width="700">
 
 ### Bugs 
 ```
