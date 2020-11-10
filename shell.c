@@ -16,7 +16,12 @@ int cdFunction(char **args);
 int helpFunction();
 int quitFunction();
 int auxiliarFunctions(int option, char **args);
-
+int execCommands(char **args);
+int execute(char **args);
+char *readLine();
+char **splitLine(char *line);
+void intro();
+void init(); 
 
 char *auxiliarStrings[] = { "cd", "help", "quit" }; // variavel global contendo os comandos auxiliares
 
