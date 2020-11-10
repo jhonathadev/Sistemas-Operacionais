@@ -53,10 +53,6 @@ Não conseguimos implementar a execução de mais de um comando seguido, separad
 
 <img src="https://github.com/vivianerenizia/Trabalho-1-Sistemas-Operacionais/blob/master/VJShellBug.jpeg" height="400" width="700">
 
-**Exemplos de ocorrência de erros:** 
-ˋˋˋ
-ls -l , cat file
-ls -l , cat file , grep foo file2 
-ˋˋˋ
+> **Exemplos de ocorrência de erros:** ls -l , cat file / ls -l , cat file , grep foo file2 
 
 > Em considerações finais, gostaríamos de agradecer ao autor do [*Tutorial - Write a Shell in C*](https://brennan.io/2015/01/16/write-a-shell-in-c/), Stephen Brennan! Thank you, sir! :shipit:
