@@ -1,6 +1,6 @@
 # Interpretador VJShell
 
->:small_red_triangle_down: Incompleto :small_red_triangle_down: Infelizmente não conseguimos finalizar dentro do prazo!
+>Status: :o2: Incompleto (Infelizmente não conseguimos finalizar dentro do prazo!)
 
 **Repositório GIT:** [*Interpretador VJShell*](https://github.com/renizia/Trabalho-1-Sistemas-Operacionais)
 
@@ -37,11 +37,11 @@ exista) e exibir a saída na tela de Prompt.
 ### Funcionamento
 O código fonte se encontra no arquivo shell.c e há um arquivo makefile para compilar o código.
 
-Primeira compilação: Comando make no terminal Linux para que o executável será gerado.
+:small_blue_diamond:Primeira compilação: Comando make no terminal Linux para que o executável será gerado.
 
-Já compilou anteriormente: Utilize o comando make clean seguido do comando make.
+:small_blue_diamond:Já compilou anteriormente: Utilize o comando make clean seguido do comando make.
 
-Já compilou: Utilize o comando ./file.
+:small_blue_diamond:Já compilou: Utilize o comando ./file.
 
 **Tela de operação do VJShell**
 
@@ -49,8 +49,14 @@ Já compilou: Utilize o comando ./file.
 
 ### Bugs 
 
-Não conseguimos implementar a execução de mais de um comando seguido separado pela virgula ou pelo pipe, como exemplificado na imagem abaixo:
+Não conseguimos implementar a execução de mais de um comando seguido, separado pela virgula ou pelo pipe, como exemplificado na imagem abaixo:
 
 <img src="https://github.com/vivianerenizia/Trabalho-1-Sistemas-Operacionais/blob/master/VJShellBug.jpeg" height="400" width="700">
+
+**Exemplos de ocorrência de erros:** 
+ˋˋˋ
+ls -l , cat file
+ls -l , cat file , grep foo file2 
+ˋˋˋ
 
 > Em considerações finais, gostaríamos de agradecer ao autor do [*Tutorial - Write a Shell in C*](https://brennan.io/2015/01/16/write-a-shell-in-c/), Stephen Brennan! Thank you, sir! :shipit:
