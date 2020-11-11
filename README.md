@@ -45,13 +45,13 @@ O código fonte se encontra no arquivo shell.c e há um arquivo makefile para co
 
 **Tela de operação do VJShell**
 
-<img src="https://github.com/vivianerenizia/Trabalho-1-Sistemas-Operacionais/blob/master/VJShell.jpeg" height="400" width="700">
+<img src="https://github.com/vivianerenizia/Trabalho-1-Sistemas-Operacionais/blob/master/imgs/VJShell.jpeg" height="400" width="700">
 
 ### Bugs 
 
 Não conseguimos implementar a execução de mais de um comando seguido, separado pela virgula ou pelo pipe, como exemplificado na imagem abaixo:
 
-<img src="https://github.com/vivianerenizia/Trabalho-1-Sistemas-Operacionais/blob/master/VJShellBug.jpeg" height="400" width="700">
+<img src="https://github.com/vivianerenizia/Trabalho-1-Sistemas-Operacionais/blob/master/imgs/VJShellBug.jpeg" height="400" width="700">
 
 > **Exemplos de ocorrência de erros:** ls -l , cat file / ls -l , cat file , grep foo file2 
 
