@@ -2,7 +2,7 @@
 
 >Status: :o2: Incompleto (Infelizmente não conseguimos finalizar dentro do prazo!)
 
-**Repositório GIT:** [*Interpretador VJShell*](https://github.com/renizia/Trabalho-1-Sistemas-Operacionais)
+**Repositório GIT:** [*Interpretador VJShell*](https://github.com/vivianerenizia/Trabalho-1-Sistemas-Operacionais)
 
 **Equipe:**
 
