@@ -1,8 +1,3 @@
-// Universidade Federal de Viçosa - Campus Rio Paranáiba (UFV-CRP)
-// Trabaho prático 1 da disciplina Sistemas Operacionais - SIN 351 
-// Desenvolvido por Jhonatha Cordeiro (5984) e Viviane Renizia (5209)
-// Professor: Rodrigo Moreira 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -11,6 +6,11 @@
 #define TRUE 1  
 #define tokDelim " ," // string de delimitados para a função srtok
 #define numAuxiliarCommands 3 // variavel de controle do numero de comandos auxialiares
+
+// Universidade Federal de Viçosa - Campus Rio Paranáiba (UFV-CRP)
+// Trabaho prático 1 da disciplina Sistemas Operacionais - SIN 351 
+// Desenvolvido por Jhonatha Cordeiro (5984) e Viviane Renizia (5209)
+// Professor: Rodrigo Moreira 
 
 int cdFunction(char **args);
 int helpFunction();
@@ -82,13 +82,13 @@ int execCommands(char **args) {
     if (execvp(args[0], args) == -1) { // verifica e executa se a função exevp executou corretamente
       perror("VJSHELL");
     }
-    exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE); // encerra a execução do programa caso algum erro inesperado aconteça
   } else if (pid < 0) { // verificação se o fork funcionou corretamente
     perror("VJSHELL");
   } else {
     //processo pai
     do {
-      waitpid(pid, &status, WUNTRACED);
+      waitpid(pid, &status, WUNTRACED); // espera o comando filho terminar sua execução para continuar a execução do programa
     } while (!WIFEXITED(status) && !WIFSIGNALED(status)); // trata possiveis erros de execução no processo filho
   }
   return 1;
@@ -96,7 +96,7 @@ int execCommands(char **args) {
 
 int execute(char **args) {
   int i;
-  // nenhum comando digitado
+  // nenhum comando digitado, encerra a execução da função
   if (args[0] == NULL) {
     return 1;
   }
@@ -110,21 +110,21 @@ int execute(char **args) {
 }
 
 char *readLine() {
-  char *buffer = malloc(512 * sizeof(char));
+  char *buffer = malloc(512 * sizeof(char)); // aloca memoria para armazenar a string que será lida
   int i = 0, caracter;
-  if (buffer == NULL) {
+  if (buffer == NULL) { // Verificar se a memoria foi alocada corretamente
     printf("Erro na alocação de memória\n");
-    exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE); // encerra a execução do programa caso algum erro inesperado aconteça
   }
   while(TRUE) {
-    caracter = getchar();
+    caracter = getchar();  // lê o proximo caracter digitado
     if (caracter == EOF) {
-      exit(EXIT_SUCCESS);
+      exit(EXIT_SUCCESS); // encerra a execução do programa caso algum erro inesperado aconteça
     } else if (caracter == '\n') {
       buffer[i] = '\0';
-      return buffer;
+      return buffer; // condição de parada do loop, retorna a string lida quando chegar ao final
     } else {
-      buffer[i] = caracter;
+      buffer[i] = caracter; // adiciona o caracter lido ao buffer
     }
     i++;
   }
@@ -132,19 +132,19 @@ char *readLine() {
 
 char **splitLine(char *line) {
   int i = 0;
-  char **string = malloc(512 * sizeof(char*));
+  char **string = malloc(512 * sizeof(char*)); // aloca memoria para armazenar a string que será dividida
   char *subString;
-  if (string == NULL) {
+  if (string == NULL) { // Verificar se a memoria foi alocada corretamente
     printf("Erro na alocação de memória\n");
-    exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE); // encerra a execução do programa caso algum erro inesperado aconteça
   }
-  subString = strtok(line, tokDelim);
+  subString = strtok(line, tokDelim); // SRTOK divide a string em substrings
   while (subString != NULL) {
     string[i] = subString;
-    subString = strtok(NULL, tokDelim);
+    subString = strtok(NULL, tokDelim); // Continua dividindo a string até chegar a NULL
     i++;
   }
-  string[i] = NULL;
+  string[i] = NULL; // deixa como NULL a ultima posição do vetor
   return string;
 }
 
@@ -162,7 +162,7 @@ void init() {
   char **args;
   char *line; 
   int state;
-  intro();
+  intro(); // chama a função de introdução do programa
   do {
     printf("VJShell -> ");
     line = readLine(); // função p/ ler a string digitada
@@ -174,6 +174,6 @@ void init() {
 }
 
 int main() {
-  init();
+  init(); // inicia a execução do programa
   return 0;
 }
